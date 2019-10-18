@@ -20,8 +20,11 @@ while 1:
    print text
  if text.find('PING') != -1:
     ircsock.send('PONG ' + text.split() [1] + '\r\n')
- if text.find('!time') != -1:
-    ircsock.send(channel + 'the time is: ' + redtime + text.split() [1] + '\r\n')
+ if text.find('!time ') != -1:
+    ircsock.send('the systems local time is: ' + redtime + text.split() [1] + '\r\n')
+ if text.find('!help ') != -1:
+    ircsock.send('im sorry but i cant help you ' + text.split() [1] + '\r\n')
+      
 
     
  
